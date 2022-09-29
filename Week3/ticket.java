@@ -15,13 +15,12 @@ class ticketClass implements Runnable{
 	public void run() {
         Random rand = new Random();
         int randNum = rand.nextInt(4)+1;
-		for(int i = 1 ; i <= randNum ; i++){
+	for(int i = 1 ; i <= randNum ; i++){
             while(sellTickets()) {
                 pTickets++;
             }
         }
-		
-		System.out.println(t.getName()+"買到"+pTickets+"張高鐵票"); 
+	System.out.println(t.getName()+"買到"+pTickets+"張高鐵票"); 
 	}
 	
 	private synchronized static boolean sellTickets(){
